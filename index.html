@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Logo, titre et description du site -->
+
+        <title></title>
+        <meta name="keywords" content="" >
+        <meta name="description" content="">
+        <link rel="shortcut icon" type="image/png" href="">
+        <link rel="canonical" href="" />
+
+    <!-- fin Logo titre et description du site -->
+
+    <!-- link des feuilles de style-->
+        <!--normalize CSS-->
+        <link href ="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--bootstrap END-->
+
+        <!-- fontawesome-->
+        <script src="https://kit.fontawesome.com/5de27bfde3.js" crossorigin="anonymous"></script>
+        <!--fontawesome END-->
+
+        <link rel ="stylesheet" type="text/css" href="public/css/style.css">
+        <!-- link rel ="stylesheet" type="" href="" minify du CSS-->
+
+    <!-- Fin link des feuilles de style-->	
+        
+    <!-- Analytics -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Analytics END -->
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>hello world</h1>
+            <nav>
+
+            </nav>
+        </header>
+
+        <main>
+            <section class ="bodyfat__calc__container">
+                <div class="bodyfat__calc__title">
+                    <h2>Calculateur d'Indice de Masse Corporel (IMC)</h2>
+                </div>
+                
+                <div class="container-sm bodyfat__calc__form " id ="formContainer">
+                    <!--<img src="" alt="" class="" id ="bgImage">-->
+                    <form method="get" class ="calc__form" >
+
+                        <div class="form-floating mb-3">
+                            <select class="form-select gender" id="gender" aria-label="Floating label select example">
+                              <option value="1">Homme</option>
+                              <option value="2" selected>Femme</option>
+                            </select>
+                            <label for="floatingSelect">Sexe :</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="number" min="1" max="99"class="form-control age" id="age" placeholder="" required>
+                            <label for="floatingInput">Âge :</label>
+                            <p id="ageErrorMsg"><!--ceci est un message d'erreur--></p>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="number" min="1" max="400" class="form-control weight" id="weight" placeholder="" required>
+                            <label for="floatingInput">Poids : (en Kilogramme)</label>
+                            <p id="ageErrorMsg"><!--ceci est un message d'erreur--></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" min="1" max="250"class="form-control height" id="height" placeholder="" required>
+                            <label for="floatingInput">Taille : (en Centimètre)</label>
+                            <p id="ageErrorMsg"><!--ceci est un message d'erreur--></p>
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto mb-5 bodyfat__calc__form__btn" >
+                            <button class="btn btn-primary" id="btnSubmit" type="submit">Calculer mon IMC</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+
+            </section>
+
+            <section>
+
+            </section>
+        </main>
+
+        <footer>
+            <h2>hello world</h2>
+        </footer>
+
+    <!-- script JS-->
+    <script src ="public/js/index.js"></script>
+    <!--script JS END-->
+    </body>
+</html>
+
+<!-- 
+
+   /\_/\
+ =( °w° )=
+   )   (  //
+  (__ __)//
+
+created by CAMATT
+
+ -->
