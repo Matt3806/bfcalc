@@ -66,6 +66,16 @@
                         </div>
 
                         <div class="form-floating mb-3">
+                            <select class="form-select gender" id="activity" aria-label="Floating label select example">
+                              <option value="1.4" selected>je travail assis et je ne pratique pas d'activité phyique</option>
+                              <option value="1.6">je travail assis et je pratique une activité physique</option>
+                              <option value="1.8">je travail debout</option>
+                              <option value="2.2">je pratique une activité physique intense</option>
+                            </select>
+                            <label for="floatingSelect">Mon activité :</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
                             <input type="number" min="1" max="99"class="form-control age" id="age" placeholder="" required>
                             <label for="floatingInput">Âge :</label>
                             <p id="ageErrorMsg"><!--ceci est un message d'erreur--></p>
