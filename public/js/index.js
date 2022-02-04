@@ -43,7 +43,7 @@ btn.addEventListener("click", function(e){
     let age = document.getElementById('age').value
     let weight = document.getElementById('weight').value
     let height = document.getElementById('height').value /100
-    let activity = document.getElementById('activity').value
+    let activity = parseFloat(document.getElementById('activity').value)
 
     let customer ={
         gender: gender,
@@ -52,12 +52,15 @@ btn.addEventListener("click", function(e){
         weight: weight,
         height: height,
     }
+
     // formule de calcul de l'IMC et envoi dans le Ls 
     let imc = customer.weight / (customer.height*customer.height)
     let imcRes = Math.round(imc)
     localStorage.setItem("customerImc", JSON.stringify(imcRes))
 
     localStorage.setItem("activity",JSON.stringify(customer.activity))
+
+    localStorage.setItem("gender", JSON.stringify(customer.gender))
     
     // formule de calcul de l'IMG et du MB puis envoi dans le Ls
     if(gender == 1){

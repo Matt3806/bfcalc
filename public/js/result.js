@@ -1,5 +1,12 @@
 // fonction pour recup les infos du LS
 
+function gender(){
+let gender = localStorage.getItem("gender")
+    if(gender != null){
+    return JSON.parse(gender)
+    }
+}
+
 function imc(){
     let customerImc = localStorage.getItem("customerImc")
     if (customerImc != null){
@@ -24,7 +31,7 @@ function mb(){
 function activity(){
     let activity = localStorage.getItem("activity")
     if (activity != null){
-        return parseFloat(JSON.parse(activity))
+        return JSON.parse(activity)
     }
 } 
 
@@ -70,3 +77,36 @@ fatNeedElement.appendChild(newfatNeed)
 let carbNeedElement = document.getElementById('carbNeed')
 let newcarbNeed = document.createTextNode(`soit : ${carbNeed} g de glucides`)
 carbNeedElement.appendChild(newcarbNeed)
+
+// interpretation
+
+function scanHtml(scan){
+let scanElement = document.getElementById('scan')
+let newScan = document.createTextNode(`${scan}`)
+scanElement.appendChild(newScan)
+}
+
+if( imc() >= 18.5 && imc() <= 25 ){
+   let scan = "vous êtes de coprulance normale "
+   scanHtml(scan)
+
+}else if( imc() < 18.5){
+    let scan = "vous êtes en insufisance pondérale (maigreur)"
+    scanHtml(scan)
+
+}else if(imc() > 25 && imc() <= 30){
+    let scan ="vous êtes en surpoids"
+    scanHtml(scan)
+
+}else if(imc() > 30 && imc() <= 35){
+   let scan ="vous êtes en obésité modérée"
+   scanHtml(scan)
+
+}else if(imc() > 35 && imc() <= 40){
+    let scan = "vous êtes en obésité sévère"
+    scanHtml(scan)
+
+}else if(imc() > 40){
+    let scan = "vous êtes en obésité morbide ou massive"
+    scanHtml(scan)
+}

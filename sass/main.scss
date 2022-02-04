@@ -1,28 +1,71 @@
+// code pour import depuis autre fichier : @import "./utils/variables";
+@import "./utils/variables.scss";
+@import "./components/loader";
+@import "./utils/keyframes";
 
+body{
+    font-family: $mainfont;
+}
 header{
-    background-color: aqua;
+    background-color: #198754; 
+    display :flex;
+    margin-bottom: 25px;
+    & .backArrow{
+        flex-grow: .25;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        & i{
+            color:black;
+        }
+    }
+    & .logo{
+        flex-grow: 10;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+    & h1{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Shrikhand', cursive;
+    margin:5px;
+        & .oLogo{
+            margin: 0 5px 0 5px;
+        }
+    }
 }
 
 .bodyfat__calc{
     &__container{
         height:100vh;
-    display:flex;
-    flex-direction:column;}
-    &__title{
-        color:black;
-        opacity: .9;
         display:flex;
-        justify-content: center;
+        flex-direction:column;}
+    &__title{
+        display:flex;
         align-items: center;
+        justify-content: center;
         flex-grow: 1;
-    }
+        & h2{
+            background-color:  #0d6efd;
+            color: white;
+            border-radius: 15px;
+            margin: 10px;
+            padding:10px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            }
+        }
     &__form{
         flex-grow:2;
         & img{
             width:100%;
             height:100vh;
             object-fit: cover;
-            position:absolute;
+            position:fixed;
             top:0;
             left:0;
             z-index: -1;
@@ -30,7 +73,35 @@ header{
     }
 
 }
+ main {
+     height:100vh;
+    & .bgImage{
+        width:100%;
+        height:100vh;
+        object-fit: cover;
+        position:fixed;
+        top:0;
+        left:0;
+        z-index: -1;   
+     }
+ }
 
 footer{
-    background-color: blueviolet;
+    background-color: rgba(0, 0, 0, 0.63);
+    opacity: 1;
+    height: 100px;
+    color: white;
+}
+.bodyfat__calc__result{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardResult {
+    background-color: white ;
+    border-radius: 25px;
+    padding:15px;
+    margin:5px;
+    max-width: 600px;
 }
