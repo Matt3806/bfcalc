@@ -47,9 +47,6 @@
 
     <body>
         <header>
-            <div class="backArrow">
-                <a href ="index.html"><i class="fas fa-arrow-left"></i></a>
-            </div>
             <div class = "logo">
                 <h1>NE<span><i class="fas fa-sync oLogo"></i></span>BI</h1>
                 <p>Mon Coach Nutrition, Fitness</p>
@@ -59,7 +56,7 @@
             </nav>
         </header>
 
-        <div class= "loader">
+       <div class= "loader">
             <h2>Nos Experts Analysent votre dossier</h2>
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_urh1bV.json" mode="bounce" background="transparent"  speed="1.2"  style="width: 600px; height: 600px;"  loop autoplay></lottie-player>
@@ -70,17 +67,21 @@
             <section class="bodyfat__calc__result">
 
                 <div class ="cardResult">
-                    <div class="bodyfat__calc__title">
-                        <h2>Votre Coaching personnalisé :</h2>
+                    <div class="container-sm bodyfat__calc__title">
+                        <h2>Votre état actuel: </h2>
                     </div>
                     <p id ="customerImc"></p>
                     <p id ="customerImg"></p>
+                    <div class="progress" id = "progressBar">
+                        <!--<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    </div>
                     <p id="scan"></p>
                     <p id ="kcNeed"></p>
                     <ul>
-                        <li id="protNeed"></li>
-                        <li id ="fatNeed"></li>
-                        <li id ="carbNeed"></li>
+                        <h3>Soit:</h3>
+                        <li id="protNeed"><i class="fas fa-drumstick-bite"></i></li>
+                        <li id ="fatNeed"><i class="fas fa-tint"></i></li>
+                        <li id ="carbNeed"><i class="fas fa-seedling"></i></li>
                     </ul>
                 </div>
                 

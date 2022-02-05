@@ -6,20 +6,20 @@
 body{
     font-family: $mainfont;
 }
+
+li {
+list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
 header{
     background-color: #198754; 
     display :flex;
     margin-bottom: 25px;
-    & .backArrow{
-        flex-grow: .25;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 36px;
-        & i{
-            color:black;
-        }
-    }
+  
     & .logo{
         flex-grow: 10;
         display:flex;
@@ -52,8 +52,8 @@ header{
             background-color:  #0d6efd;
             color: white;
             border-radius: 15px;
-            margin: 10px;
             padding:10px;
+            width : 100%;
             display:flex;
             align-items: center;
             justify-content: center;
@@ -104,4 +104,12 @@ footer{
     padding:15px;
     margin:5px;
     max-width: 600px;
+    & li {
+        font-size: 18px;
+        & i{
+         margin:0 15px 0 15px;
+        }
+    }
+    
 }
+

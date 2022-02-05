@@ -63,50 +63,65 @@ kcNeedElement.appendChild(newKcNeed)
 // creation de l'element prot
 
 let protNeedElement = document.getElementById('protNeed')
-let newprotNeed = document.createTextNode(`soit : ${protNeed} g de protéines`)
+let newprotNeed = document.createTextNode(`${protNeed} g de protéines`)
 protNeedElement.appendChild(newprotNeed)
 
 // creation de l'element fat
 
 let fatNeedElement = document.getElementById('fatNeed')
-let newfatNeed= document.createTextNode(`soit : ${fatNeed} g de lipides`)
+let newfatNeed= document.createTextNode(`${fatNeed} g de lipides`)
 fatNeedElement.appendChild(newfatNeed)
 
 // creation de l'element carb
 
 let carbNeedElement = document.getElementById('carbNeed')
-let newcarbNeed = document.createTextNode(`soit : ${carbNeed} g de glucides`)
+let newcarbNeed = document.createTextNode(`${carbNeed} g de glucides`)
 carbNeedElement.appendChild(newcarbNeed)
 
 // interpretation
 
-function scanHtml(scan){
-let scanElement = document.getElementById('scan')
-let newScan = document.createTextNode(`${scan}`)
-scanElement.appendChild(newScan)
+//création de la barre de progression 
+function progressHtml(progress , bg){
+    let progressBar = document.getElementById('progressBar')
+    progressBar.insertAdjacentHTML("afterbegin", `<div class= "progress-bar ${bg}" role="progressbar" style= "width : ${progress/72*100}%" aria-valuenow= "${progress}" aria-valuemin="0" aria-valuemax="100"></div>`)
 }
+
+// explication de la barre de progression
+function scanHtml(scan){
+    let scanElement = document.getElementById('scan')
+    let newScan = document.createTextNode(`${scan}`)
+    scanElement.appendChild(newScan)
+}
+
+// condition affichant la bonne barre de progression et sa bonne explication
 
 if( imc() >= 18.5 && imc() <= 25 ){
    let scan = "vous êtes de coprulance normale "
    scanHtml(scan)
+   progressHtml(imc(),"bg-success")
 
 }else if( imc() < 18.5){
     let scan = "vous êtes en insufisance pondérale (maigreur)"
     scanHtml(scan)
+    progressHtml(imc(),"bg-danger")
 
 }else if(imc() > 25 && imc() <= 30){
     let scan ="vous êtes en surpoids"
     scanHtml(scan)
+    progressHtml(imc(),"bg-info")
 
 }else if(imc() > 30 && imc() <= 35){
    let scan ="vous êtes en obésité modérée"
    scanHtml(scan)
+   progressHtml(imc(),"bg-warning")
 
 }else if(imc() > 35 && imc() <= 40){
     let scan = "vous êtes en obésité sévère"
     scanHtml(scan)
+    progressHtml(imc(),"bg-warning")
 
 }else if(imc() > 40){
     let scan = "vous êtes en obésité morbide ou massive"
     scanHtml(scan)
+    progressHtml(imc(),"bg-danger")
 }

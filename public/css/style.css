@@ -14,6 +14,16 @@
   top: 0;
   left: 0;
 }
+.loader h2 {
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 15px;
+  padding: 10px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @keyframes fondu-out {
   0% {
@@ -33,20 +43,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
   background-color: #198754;
   display: flex;
   margin-bottom: 25px;
-}
-header .backArrow {
-  flex-grow: 0.25;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 36px;
-}
-header .backArrow i {
-  color: black;
 }
 header .logo {
   flex-grow: 10;
@@ -80,8 +88,8 @@ header h1 .oLogo {
   background-color: #0d6efd;
   color: white;
   border-radius: 15px;
-  margin: 10px;
   padding: 10px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,6 +140,12 @@ footer {
   padding: 15px;
   margin: 5px;
   max-width: 600px;
+}
+.cardResult li {
+  font-size: 18px;
+}
+.cardResult li i {
+  margin: 0 15px 0 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

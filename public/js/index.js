@@ -33,6 +33,7 @@ genderChange.addEventListener("change", function(e){
     }
 })
 
+
 let btn = document.getElementById('btnSubmit')
 
 // création de l'objet customer au click
@@ -62,14 +63,15 @@ btn.addEventListener("click", function(e){
 
     localStorage.setItem("gender", JSON.stringify(customer.gender))
     
-    // formule de calcul de l'IMG et du MB puis envoi dans le Ls
+    // formule de calcul de l'IMG et du MB puis envoi dans le Ls et prevent null
+
     if(gender == 1){
         let img = 1.2*imc + 0.23*age - 10.8 -5.4
         let imgRes = Math.round(img)
         let mb = 1.083*Math.pow(weight, 0.48)*Math.pow(height, 0.50)*Math.pow(age, -0.13)*1000
         localStorage.setItem("customerImg", JSON.stringify(imgRes))
         localStorage.setItem("customerMb", JSON.stringify(mb))
-    }else{
+    }else if(gender == 2){
         let img =  1.2*imc + 0.23*age -5.4
         let imgRes = Math.round(img)
         let mb = 0.963*Math.pow(weight, 0.48)*Math.pow(height, 0.50)*Math.pow(age, -0.13)*1000
