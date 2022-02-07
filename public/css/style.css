@@ -18,8 +18,9 @@
   background-color: #0d6efd;
   color: white;
   border-radius: 15px;
-  padding: 10px;
-  width: 600px;
+  padding: 15px;
+  margin: 25px;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;

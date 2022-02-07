@@ -65,7 +65,7 @@
                 
                 <div class="container-sm bodyfat__calc__form " id ="formContainer">
                     <!--<img src="" alt="" class="" id ="bgImage">-->
-                    <form method="get" class ="calc__form" >
+                    <form method="get" class ="calc__form" id = "calcForm">
 
                         <div class="form-floating mb-3">
                             <select class="form-select gender" id="gender" aria-label="Floating label select example">
@@ -97,21 +97,20 @@
                         <div class="form-floating mb-3">
                             <input type="number" min="18" max="99"class="form-control age" id="age" placeholder= "" required>
                             <p id = errorMsg></p>
-                            <label for="floatingInput">Âge :</label>
-                            
+                            <label for="floatingInput">Âge :</label>                            
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" min="100" max="400" class="form-control weight" id="weight" placeholder="" required>
+                            <input type="number" min="30" max="400" class="form-control weight" id="weight" placeholder="" required>
                             <p id = errorMsg></p>
                             <label for="floatingInput">Poids : (en Kilogramme)</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" min="10" max="250"class="form-control height" id="height" placeholder="" required>
+                            <input type="number" min="100" max="250"class="form-control height" id="height" placeholder="" required>
                             <p id = errorMsg></p>
                             <label for="floatingInput">Taille : (en Centimètre)</label>
                         </div>
                         <div class="d-grid gap-2 mx-auto mb-5 bodyfat__calc__form__btn" >
-                            <button class="btn btn-primary btn-lg" id="btnSubmit" type="button">demander mon coaching</button>
+                            <button class="btn btn-primary btn-lg" id="btnSubmit" type="submit">demander mon coaching</button>
                         </div>
                     </form>
                 </div>
